@@ -45,11 +45,12 @@ void Count(){
 }
 
  bool fill(int a,int b,int c,int d,int e,int f,int g){
-        int arr[] = {a,b,c,d,e,f,g,
-                34-a-b-c,34-d-e-f,
-                68-2*a-2*b-c-d-e+f-g,
-                34-a-d-g,-34+2*a+b+c+d-f+g,e+f-g,
-                68-2*a-b-c-d-e-g,-34+a+b+c+d+g,-34+2*a+b+d+e-f+g};
+        int arr[] = {
+                 a,b,c,34-a-b-c,
+                 d,e,f,34-d-e-f,
+                 34-2*a-b-c-d+f+g,g,34-e-f-g, -34+2*a+b+c+d+e-g,
+                 a+b+c-f-g,34-b-e-g,-c+e+g,-a+f+g
+                };
         bubble(arr);
         for(int i=0;i<CONST_LEN;i++){
             if(*(arr+i)!=*(RIGHT_ARR+i))
