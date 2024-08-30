@@ -59,7 +59,7 @@ void Count(){
 }
 void bubble(int* A){
     int moment;
-    for(int i=CONST_LEN;i>0;i--)
+    for(int i=CONST_LEN-1;i>0;i--)
         for(int j=0;j<i;j++)
             if(A[j]>A[j+1]){
                 moment=A[j];
