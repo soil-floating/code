@@ -27,10 +27,10 @@ public class magicSquare {
 
     boolean fill(int a,int b,int c, int d, int e,int f,int g){
         int[] arr = {
-                a,b,c,d,
-                e,f,g,34-a-b-c,
-                34-d-e-f,68-2*a-2*b-c-d-e+f-g,34-a-d-g,-34+2*a+b+c+d-f+g,
-                e+f-g,68-2*a-b-c-d-e-g,-34+a+b+c+d+g,-34+2*a+b+d+e-f+g
+                a,b,c,34-a-b-c,
+                d,e,f,34-d-e-f,
+                34-2*a-b-c-d+f+g,g,34-e-f-g, -34+2*a+b+c+d+e-g,
+                a+b+c-f-g,34-b-e-g,-c+e+g,-a+f+g
         };
         bubble(arr);
         return Arrays.equals(arr, right_arr);
@@ -38,10 +38,10 @@ public class magicSquare {
 
     void printer(int a,int b,int c, int d, int e,int f,int g,PrintWriter toFile) throws IOException {
         int[] arr = {
-                a,b,c,d,
-                e,f,g,34-a-b-c,
-                34-d-e-f,68-2*a-2*b-c-d-e+f-g,34-a-d-g,-34+2*a+b+c+d-f+g,
-                e+f-g,68-2*a-b-c-d-e-g,-34+a+b+c+d+g,-34+2*a+b+d+e-f+g
+                a,b,c,34-a-b-c,
+                d,e,f,34-d-e-f,
+                34-2*a-b-c-d+f+g,g,34-e-f-g, -34+2*a+b+c+d+e-g,
+                a+b+c-f-g,34-b-e-g,-c+e+g,-a+f+g
         };
         toFile.println("第"+count+"种");
         for(int i=0;i<=3;i++) {
