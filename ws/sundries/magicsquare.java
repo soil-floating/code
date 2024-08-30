@@ -43,8 +43,6 @@ public class magicSquare {
                 34-d-e-f,68-2*a-2*b-c-d-e+f-g,34-a-d-g,-34+2*a+b+c+d-f+g,
                 e+f-g,68-2*a-b-c-d-e-g,-34+a+b+c+d+g,-34+2*a+b+d+e-f+g
         };
-        PrintWriter toFile;
-        toFile = new PrintWriter("magicsquare.txt");
         toFile.println("第"+count+"种");
         for(int i=0;i<=3;i++) {
             for (int j=0;j<=3;j++)
