@@ -36,7 +36,7 @@ public class magicSquare {
         return Arrays.equals(arr, right_arr);
     }
 
-    void printer(int a,int b,int c, int d, int e,int f,int g) throws IOException {
+    void printer(int a,int b,int c, int d, int e,int f,int g,PrintWriter toFile) throws IOException {
         int[] arr = {
                 a,b,c,d,
                 e,f,g,34-a-b-c,
@@ -44,7 +44,7 @@ public class magicSquare {
                 e+f-g,68-2*a-b-c-d-e-g,-34+a+b+c+d+g,-34+2*a+b+d+e-f+g
         };
         PrintWriter toFile;
-        toFile = new PrintWriter("magicsquare.txt", StandardCharsets.UTF_8);
+        toFile = new PrintWriter("magicsquare.txt");
         toFile.println("第"+count+"种");
         for(int i=0;i<=3;i++) {
             for (int j=0;j<=3;j++)
@@ -58,6 +58,8 @@ public class magicSquare {
 
     void count() throws IOException {
         start = System.currentTimeMillis();
+        PrintWriter toFile;
+        toFile = new PrintWriter("magicsquare.txt");
         for (int i1=1;i1<= right_arr.length;i1++){
             for (int i2=1;i2<= right_arr.length;i2++){
                 if(i1!=i2)
@@ -73,7 +75,7 @@ public class magicSquare {
                                                         if(i6!=i7)
                                                             if(fill(i1,i2,i3,i4,i5,i6,i7)) {
                                                                 count++;
-                                                                printer(i1,i2,i3,i4,i5,i6,i7);
+                                                                printer(i1,i2,i3,i4,i5,i6,i7,toFile);
                                                             }
                                                     }
                                             }
@@ -82,8 +84,8 @@ public class magicSquare {
                     }
             }
         }
+        toFile.close();
         end = System.currentTimeMillis();
         runTime = (end-start)/1000;
     }
 }
-
