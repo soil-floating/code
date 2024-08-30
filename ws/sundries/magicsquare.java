@@ -4,8 +4,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 /**
+ * 这是一个计算四阶幻方所有结果的程序
  * 调用count()即可
  * 查看程序耗时，存储在runTime中
+ * 查看总种数，存储在count中
  */
 public class magicSquare {
     static int count = 0;
