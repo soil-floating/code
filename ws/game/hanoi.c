@@ -14,7 +14,7 @@ int main(void){
 	char c = 'C';
 	int n;
 	printf("Enter your level of hanoi tower:");
-	scanf("%d",n);
+	scanf("%d",&n);
 	printf("\n");
 	hanoi(a,b,c,n);
 }
