@@ -1,5 +1,5 @@
 #include<stdio.h>
-double pow(double,int);
+double pow(double,int);//math.h里面有pow()，我就是玩
 int main(){
     double a;
     scanf("%lf",&a);
